@@ -1,0 +1,11 @@
+DEPENDENCIES
+  ihs
+    path: .
+    metadata: true
+  siteminder
+    path: ../siteminder
+
+GRAPH
+  ihs (0.1.0)
+  siteminder (0.1.0)
+    ihs (>= 0.0.0)
