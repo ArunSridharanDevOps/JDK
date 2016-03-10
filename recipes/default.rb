@@ -12,6 +12,7 @@ ihs_group = node['ihs']['group']
 ihs_root = node['ihs']['root']
 ihs_conf_root = node['ihs']['conf_root']
 #ihs_sec_bin = node['ihs']['sec_root']
+jdk_rpm_file = node['jdk']['rpm_file']
 jdk_rpm_location = node['jdk']['s3_url']
 
 group ihs_group do
