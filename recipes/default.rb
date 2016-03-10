@@ -41,7 +41,7 @@ remote_file jdk_rpm_file do
   action :create
 end
 
- rpm_package jdk_rpm_name do
+ rpm_package jdk_rpm_file do
     action :install
   end
 
