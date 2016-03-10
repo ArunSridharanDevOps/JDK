@@ -12,7 +12,7 @@ ihs_group = node['ihs']['group']
 ihs_root = node['ihs']['root']
 ihs_conf_root = node['ihs']['conf_root']
 #ihs_sec_bin = node['ihs']['sec_root']
-jdk_rpm_name = node['ihs']['binary_rpm']
+jdk_rpm_location = node['jdk']['s3_url']
 
 group ihs_group do
   group_name ihs_group
@@ -32,6 +32,12 @@ end
     group ihs_group
     action :create
   end
+end
+
+remote_file jdk_rpm_file do
+  source jdk_rpm_location
+  mode '0755'
+  action :create
 end
 
  rpm_package jdk_rpm_name do
